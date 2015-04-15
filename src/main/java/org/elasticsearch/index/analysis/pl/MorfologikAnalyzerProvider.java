@@ -43,7 +43,7 @@ public class MorfologikAnalyzerProvider extends AbstractIndexAnalyzerProvider<Mo
     @Inject
     public MorfologikAnalyzerProvider(Index index, @IndexSettings Settings indexSettings, Environment env, @Assisted String name, @Assisted Settings settings) {
         super(index, indexSettings, name, settings);
-        analyzer = new MorfologikAnalyzer(version);
+        analyzer = new MorfologikAnalyzer();
     }
 
     @Override

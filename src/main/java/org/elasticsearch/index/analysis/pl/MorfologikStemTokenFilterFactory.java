@@ -42,6 +42,6 @@ public class MorfologikStemTokenFilterFactory extends AbstractTokenFilterFactory
     }
 
     @Override public TokenStream create(TokenStream tokenStream) {
-        return new MorfologikFilter(tokenStream, version);
+        return new MorfologikFilter(tokenStream);
     }
 }

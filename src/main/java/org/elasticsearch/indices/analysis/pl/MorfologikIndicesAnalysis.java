@@ -50,7 +50,7 @@ public class MorfologikIndicesAnalysis extends AbstractComponent {
             new PreBuiltAnalyzerProviderFactory(
                 "morfologik",
                 AnalyzerScope.INDICES,
-                new MorfologikAnalyzer(Lucene.ANALYZER_VERSION)
+                new MorfologikAnalyzer()
             )
         );
 
@@ -60,7 +60,7 @@ public class MorfologikIndicesAnalysis extends AbstractComponent {
             }
 
             @Override public TokenStream create(TokenStream tokenStream) {
-                return new MorfologikFilter(tokenStream, Lucene.ANALYZER_VERSION);
+                return new MorfologikFilter(tokenStream);
             }
         }));
     }
